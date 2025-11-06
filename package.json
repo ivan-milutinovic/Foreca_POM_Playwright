@@ -1,0 +1,27 @@
+{
+  "name": "foreca-test-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project chromium",
+    "test:nav": "npx playwright test tests/regression/navigation --project chromium",
+    "test:src": "npx playwright test tests/regression/search --project chromium",
+    "test:set": "npx playwright test tests/regression/settings --project chromium",
+    "test:map": "npx playwright test tests/regression/maps --project chromium",
+    "test:for": "npx playwright test tests/regression/forecast --project chromium",
+    "test:crp": "npx playwright test tests/smoke/critical_path --project chromium",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.2",
+    "@types/xlsx": "^0.0.36"
+  }
+}

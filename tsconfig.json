@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    /* Osnovne opcije */
+    "target": "ES2020",                                /* Navodi ciljnu ECMAScript verziju za kompajliranje. Playwright projekti često koriste ES2020 ili novije. */
+    "module": "commonjs",                              /* Određuje sistem modula koji se koristi. 'commonjs' je standard za Node.js. */
+    "esModuleInterop": true,                           /* Omogućava kompatibilnost između CommonJS i ES modula. NEOPHODNO za uvoz biblioteka kao što je 'xlsx'. */
+    "forceConsistentCasingInFileNames": true,          /* Enforce da su imena fajlova konzistentno pisana (bitno za kompatibilnost platformi). */
+    "strict": true,                                    /* Uključuje sve stroge provere TypeScripta. Preporučeno za kvalitetan kod. */
+    "skipLibCheck": true,                              /* Preskače proveru tipova deklaracionih fajlova iz biblioteka (ubrzava kompajliranje). */
+    "outDir": "./dist",                                /* (Opciono) Izlazni direktorijum za kompajlirane JS fajlove. */
+    
+    /* Povezano sa Playwrightom i Node.js-om */
+    "moduleResolution": "node",                        /* Određuje strategiju rešavanja modula. 'node' je standard. */
+    "resolveJsonModule": true,                         /* Omogućava uvoz .json fajlova (iako koristiš Excel, ovo je dobra praksa). */
+    "types": [
+      "node",
+      "@playwright/test"
+    ],                                                 /* Uključuje definicije tipova za Node.js, Jest (često se koristi za asertacije) i Playwright. */
+
+    /* Lokacija projektnih fajlova */
+    "rootDir": ".",                                    /* Navodi koren projekta. */
+    
+    /* Inkluzije i ekskluzije */
+    "baseUrl": ".",                                    /* Omogućava apsolutne uvoze u odnosu na koren projekta (npr. 'import { HomePage } from "pages/HomePage"'). */
+    "paths": {
+        // Omogućava ti da koristiš apsolutne putanje u uvozima
+        "@pages/*": ["pages/*"],
+        "@utils/*": ["utils/*"],
+        "@fixtures/*": ["fixtures/*"]
+    }
+  },
+  
+  "include": [
+    "tests/**/*.ts",                                   /* Uključi sve .ts fajlove u tests folderu */
+    "pages/**/*.ts",                                   /* Uključi sve .ts fajlove u pages folderu */
+    "fixtures/**/*.ts",                                /* Uključi sve .ts fajlove u fixtures folderu */
+    "utils/**/*.ts",                                   /* Uključi sve .ts fajlove u utils folderu */
+    "data/**/*.json"                                   /* Uključi JSON fajlove (iako koristiš Excel) */
+  ],
+  "exclude": [
+    "node_modules"                                     /* Isključi standardni node_modules folder */
+  ]
+}
