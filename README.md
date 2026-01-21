@@ -1,8 +1,8 @@
 # Foreca_POM_Playwright
 
-[![Playwright Logo](https://img.shields.io/badge/Playwright-v1.x-brightgreen?logo=playwright&style=for-the-badge)](https://playwright.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript&style=for-the-badge)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-v16%2B-green?logo=node.js&style=for-the-badge)](https://nodejs.org/)
+[![Playwright Logo](https://img.shields.io/badge/Playwright-v1.57-brightgreen?logo=playwright&style=for-the-badge)](https://playwright.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?logo=typescript&style=for-the-badge)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-v24.11-green?logo=node.js&style=for-the-badge)](https://nodejs.org/)
 [![Test Status](https://img.shields.io/badge/Status-Smoke%20Tests-yellow?style=for-the-badge)](https://foreca.com/)
 
 ## Project Overview
