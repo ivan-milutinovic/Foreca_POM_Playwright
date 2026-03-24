@@ -31,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Prilagodite Vašoj verziji Node.js
+          node-version: 20 # Prilagodite Vašoj verziji Node.js
 
       - name: Install dependencies
         run: npm ci
@@ -41,7 +41,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=list,junit # Prilagodite komandu ako Vam treba drugi reporter
+        run: npx playwright test --reporter=html,list # Prilagodite komandu ako Vam treba drugi reporter
 
       # Ako želite da sačuvate izveštaje sa testiranja
       - uses: actions/upload-artifact@v4
